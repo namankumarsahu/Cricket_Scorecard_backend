@@ -1,0 +1,1 @@
+mongodb+srv://namansahu31:Naman%23123@cluster0.cpq7yw0.mongodb.net/scorecard
