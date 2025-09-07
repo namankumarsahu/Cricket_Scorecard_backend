@@ -14,7 +14,6 @@ app.use(express.json());
 
 app.use(cors({
   origin: [
-    
     "https://cricket-scorecard-app-bki8-gf16p4q8q.vercel.app" 
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -71,6 +70,23 @@ server.listen(PORT, () => console.log(`🚀 Server running on http://localhost:$
  */
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* const cors = require("cors");
 const express = require("express");

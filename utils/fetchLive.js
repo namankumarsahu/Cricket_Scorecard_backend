@@ -1,4 +1,4 @@
-const express = require("express");
+/* const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 const Match = require("../models/Match");
@@ -80,9 +80,9 @@ async function saveMatches(apiMatches) {
     );
   }
 }
-
+ */
 // Fetch and save helper
-async function fetchAndSaveMatches(endpoint) {
+/* async function fetchAndSaveMatches(endpoint) {
   const headers = {
     "x-rapidapi-key": RAPID_API_KEY,
     "x-rapidapi-host": RAPID_API_HOST,
@@ -100,9 +100,9 @@ async function ensureFreshMatches(type) {
   const endpoint = type;
   await fetchAndSaveMatches(endpoint);
 }
-
+ */
 // API routes for frontend
-
+/* 
 router.get("/live", async (req, res) => {
   try {
     await ensureFreshMatches("live");
@@ -124,7 +124,7 @@ router.get("/recent", async (req, res) => {
     res.status(500).json({ error: "Failed to get recent matches" });
   }
 });
-
+ */
 
 /* 
 router.get("/recent", async (req, res) => {
@@ -188,7 +188,7 @@ router.get("/upcoming", async (req, res) => {
 });
  */
 
-router.get("/upcoming", async (req, res) => {
+/* router.get("/upcoming", async (req, res) => {
   try {
     // await ensureFreshMatches("upcoming"); // Disable API refresh for now
     const matches = await Match.find({ status: "Upcoming" }).sort({ startTime: 1 });
@@ -211,3 +211,4 @@ router.get("/all", async (req, res) => {
 });
 
 module.exports = router;
+ */
