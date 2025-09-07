@@ -14,12 +14,15 @@ app.use(express.json());
 
 app.use(cors({
   origin: [
-    "http://localhost:5173",            // local dev
-    "https://cricket-scorecard-app-bki8-gf16p4q8q.vercel.app" // deployed frontend
+    
+    "https://cricket-scorecard-app-bki8-gf16p4q8q.vercel.app" 
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
 }));
+
+app.options("*", cors()); // allow preflight across all routes
+
 
 
 const mongoose = require("mongoose");
