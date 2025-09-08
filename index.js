@@ -5,12 +5,12 @@ const app = express();
 app.use(express.json());
 
 // Enable CORS with specific frontend origin and needed methods
-/* app.use(cors({
+/*  app.use(cors({
   origin: "http://localhost:5173",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true, // If your frontend sends cookies or auth headers
 }));
- */
+  */
 
 app.use(cors({
   origin: [
@@ -36,7 +36,7 @@ app.use("/api/auth", authRoutes);
 
 // MongoDB connection
 mongoose
-  .connect("mongodb+srv://namansahu31:Naman%23123@cluster0.cpq7yw0.mongodb.net/scorecard", {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
